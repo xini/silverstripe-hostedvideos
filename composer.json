@@ -11,7 +11,7 @@
 	"require":
 	{
 		"silverstripe/cms": "~3.2",
-		"micschk/silverstripe-chunkeduploadfield": "dev-fix-ss-32"
+		"micschk/silverstripe-chunkeduploadfield": "fix-ss-32-dev"
 	},
 	"repositories": [
 		{ "type": "vcs", "url": "git@github.com:xini/silverstripe-chunkeduploadfield.git" }
