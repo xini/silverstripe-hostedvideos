@@ -1,0 +1,22 @@
+{
+	"name": "innoweb/silverstripe-hostedvideos",
+	"description": "adds video handling to objects. supports locally hosted videos as well as YouTube and Vimeo.",
+	"type": "silverstripe-module",
+	"license": "BSD-3-Clause",
+	"keywords": ["silverstripe", "video", "self-hosted", "youtube", "vimeo"],
+	"authors": [{
+		"name": "Florian Thoma",
+		"homepage": "http://www.innoweb.com.au"
+	}],
+	"require":
+	{
+		"silverstripe/cms": "~3.2",
+		"micschk/silverstripe-chunkeduploadfield": "dev-fix-ss-32"
+	},
+	"repositories": [
+		{ "type": "vcs", "url": "git@github.com:xini/silverstripe-chunkeduploadfield.git" }
+	],
+	"extra": {
+		"installer-name": "hostedvideos"
+	}
+}

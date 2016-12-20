@@ -1,0 +1,17 @@
+HostedVideoExtension:
+  resolutions:
+    SD: 480
+    HD: 720
+  formats:
+    mp4:
+      type: 'video/mp4'
+      label: 'MP4 (H.264 with AAC or MP3 audio)'
+    webm:
+      type: 'video/webm'
+      label: 'WebM (VP8/VP9 with Vorbis or Opus audio)'
+    ogg:
+      type: 'video/ogg'
+      label: 'Ogg (Theora with Vorbis audio)'
+  display_size:
+    width: 560
+    height: 315
