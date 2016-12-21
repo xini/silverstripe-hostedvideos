@@ -14,7 +14,7 @@
 		"micschk/silverstripe-chunkeduploadfield": "dev-fix-ss-32"
 	},
 	"repositories": [
-		{ "type": "vcs", "url": "https://github.com/xini/silverstripe-chunkeduploadfield.git" }
+		{ "type": "vcs", "url": "git@github.com:xini/silverstripe-chunkeduploadfield.git" }
 	],
 	"extra": {
 		"installer-name": "hostedvideos"
