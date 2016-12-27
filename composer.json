@@ -11,11 +11,8 @@
 	"require":
 	{
 		"silverstripe/cms": "~3.2",
-		"micschk/silverstripe-chunkeduploadfield": "dev-fix-ss-32"
+		"micschk/silverstripe-chunkeduploadfield": "~1.1"
 	},
-	"repositories": [
-		{ "type": "vcs", "url": "git@github.com:xini/silverstripe-chunkeduploadfield.git" }
-	],
 	"extra": {
 		"installer-name": "hostedvideos"
 	}
