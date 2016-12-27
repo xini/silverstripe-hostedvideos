@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.4]
+
+* switch dependencies to tagged version
+* update readme
+
+## [1.0.3]
+
+bugfixes
+
 ## [1.0.2]
 
 Move to chunkeduploadfield master after fix was merged

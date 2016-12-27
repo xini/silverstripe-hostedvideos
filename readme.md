@@ -1,5 +1,14 @@
 # Self-hosted video integration (also supporting YouTube and Vimeo videos)
 
+This module allows adding locally hosted, YouTube or Vimeo videos to any object.
+
+It uses 
+* [ChunkedUploadField] (https://github.com/micschk/silverstripe-chunkeduploadfield) to allow uploads larger than the configured PHP limits
+* [afterglow video player] (https://afterglowplayer.com/) for locally stored videos (which allows SD and HD versions of videos)
+* native YouTube and Vimeo embedding for those videos (afterglow could be used here too, but then the videos wouldn't work without javascript)
+
+When adding Vimeo and YouTube videos, you can add the video code or the whole URL. If URLs are given, the URLs are parsed the video codes extracted.
+
 ## Usage
 
 Add the `HostedVideoExtension` to any page/dataobject you want to contain a video. This will add the fields for the object to contain one single video.
@@ -8,7 +17,7 @@ Insert `$HostedVideo` in your template, wherever you want your video to show.
 
 ## Configuration
 
-### default size
+### display size
 
 You can specify the display size of the videos in your yml config:
 
