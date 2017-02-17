@@ -117,8 +117,8 @@ class HostedVideoExtension extends DataExtension {
         }
         $pattern = '/https?:\/\/(?:www\.)?vimeo.com\/(?:channels\/(?:\w+\/)?|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/';
         $result = preg_match($pattern, $url, $matches);
-        if (false !== $result && isset($matches[1])) {
-            return $matches[1];
+        if (false !== $result && isset($matches[3])) {
+            return $matches[3];
         }
         return false;
     }
