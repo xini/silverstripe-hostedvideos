@@ -102,6 +102,7 @@ class HostedVideoExtension extends DataExtension {
     			  )			    # End path alternatives.
     			)			    # End host alternatives.
     			([\w-]{11})     # Allow 10-12 for 11 char youtube id.
+                .*              # other parameters
     			$%x'
             ;
             $result = preg_match($pattern, $url, $matches);

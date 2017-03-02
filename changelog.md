@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.6]
+
+* fix YouTube code extraction if list or other parameters present
+
 ## [1.0.5]
 
 * fix vimeo code extraction
