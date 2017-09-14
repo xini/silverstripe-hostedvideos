@@ -17,6 +17,30 @@ Insert `$HostedVideo` in your template, wherever you want your video to show.
 
 ## Configuration
 
+### video sources
+
+By default all three video sources are enabled. You can disable any of them using the following config options:
+
+```
+HostedVideoExtension:
+  disable_selfhosted: true
+  disable_vimeo: true
+  disable_youtube: true
+```
+
+### video resolutions
+
+By default there are two video resultions configured for self hosted videos:
+
+```
+HostedVideoExtension:
+  resolutions:
+    SD: 480
+    HD: 720
+```
+
+You can change these settings and add more resultions if you would like to give the user more options. 
+
 ### display size
 
 You can specify the display size of the videos in your yml config:

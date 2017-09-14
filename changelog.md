@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.0]
+
+* upgrade afterglow to 0.4.2
+* add config options to disable video sources
+
 ## [1.0.6]
 
 * fix YouTube code extraction if list or other parameters present
