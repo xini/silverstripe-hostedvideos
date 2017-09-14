@@ -15,3 +15,6 @@ HostedVideoExtension:
   display_size:
     width: 560
     height: 315
+  disable_selfhosted: false
+  disable_vimeo: false
+  disable_youtube: false

@@ -2,7 +2,7 @@
 class HostedVideoExtension extends DataExtension {
     
     private static $db = array(
-        'VideoSource' => "Enum('Self-Hosted,YouTube,Vimeo','Self-Hosted')",
+        'VideoSource' => "Enum('Self-Hosted,YouTube,Vimeo')",
         'YoutubeCode' => 'Varchar(50)',
         'VimeoCode' => 'Varchar(50)',
     );
@@ -16,13 +16,24 @@ class HostedVideoExtension extends DataExtension {
         
         $fields->removeByName('VideoVersions');
         
+        $sources = array();
+        if (!Config::inst()->get('HostedVideoExtension', 'disable_youtube')) {
+            $sources['YouTube'] = 'YouTube';
+        }
+        if (!Config::inst()->get('HostedVideoExtension', 'disable_vimeo')) {
+            $sources['Vimeo'] = 'Vimeo';
+        }
+        if (!Config::inst()->get('HostedVideoExtension', 'disable_selfhosted')) {
+            $sources['Self-Hosted'] = 'Self-Hosted';
+        }
+        
         $fields->addFieldsToTab(
             'Root.Video', 
             array(
                 DropdownField::create(
                     'VideoSource',
                     'Video Source',
-                    $this->owner->dbObject('VideoSource')->enumValues()
+                    $sources
                 ),
                 TextField::create('YoutubeCode', 'Youtube Code')
                     ->setRightTitle('You can enter the full YouTube URL of the video and the code will be extracted.'),
