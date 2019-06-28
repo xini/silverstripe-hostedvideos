@@ -11,7 +11,8 @@
 	"require":
 	{
 		"silverstripe/cms": "~3.2",
-		"micschk/silverstripe-chunkeduploadfield": "1.1"
+		"micschk/silverstripe-chunkeduploadfield": "1.1",
+		"unclecheese/display-logic": "~1.7"
 	},
 	"extra": {
 		"installer-name": "hostedvideos"

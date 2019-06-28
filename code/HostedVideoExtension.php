@@ -12,8 +12,10 @@ class HostedVideoExtension extends DataExtension {
     );
     
     public function updateCMSFields(FieldList $fields) {
-        Requirements::javascript('hostedvideos/javascript/cms-hostedvideos.js');
         
+        $fields->removeByName('VideoSource');
+        $fields->removeByName('YoutubeCode');
+        $fields->removeByName('VimeoCode');
         $fields->removeByName('VideoVersions');
         
         $sources = array();
@@ -35,18 +37,27 @@ class HostedVideoExtension extends DataExtension {
                     'Video Source',
                     $sources
                 ),
-                TextField::create('YoutubeCode', 'Youtube Code')
-                    ->setRightTitle('You can enter the full YouTube URL of the video and the code will be extracted.'),
-                TextField::create('VimeoCode', 'Vimeo Code')
-                    ->setRightTitle('You can enter the full Vimeo URL of the video and the code will be extracted.'),
-                GridField::create(
-                    'VideoVersions',
-                    'Video Versions',
-                    $this->owner->VideoVersions(),
-                    GridFieldConfig_RecordEditor::create()
-                ),
+                $videoYoutubeWrapper = DisplayLogicWrapper::create(
+                    TextField::create('YoutubeCode', 'Youtube Code')
+                        ->setRightTitle('You can enter the full YouTube URL of the video and the code will be extracted.')
+                )->addExtraClass('field'),
+                $videoVimeoWrapper = DisplayLogicWrapper::create(
+                    TextField::create('VimeoCode', 'Vimeo Code')
+                        ->setRightTitle('You can enter the full Vimeo URL of the video and the code will be extracted.')
+                )->addExtraClass('field'),
+                $videoVersionsWrapper = DisplayLogicWrapper::create(
+                    GridField::create(
+                        'VideoVersions',
+                        'Video Versions',
+                        $this->owner->VideoVersions(),
+                        GridFieldConfig_RecordEditor::create()
+                    )
+                )->addExtraClass('field')
             )
         );
+        $videoYoutubeWrapper->displayIf("VideoSource")->isEqualTo("YouTube");
+        $videoVimeoWrapper->displayIf("VideoSource")->isEqualTo("Vimeo");
+        $videoVersionsWrapper->displayIf("VideoSource")->isEqualTo("Self-Hosted");
         
     }
     

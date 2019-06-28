@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.2.0]
+
+* switch to displaylogic to toggle fields in CMS
+
 ## [1.1.1]
 
 * set video preload to "metadata"
