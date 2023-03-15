@@ -1,5 +1,7 @@
 # Self-hosted video integration (also supporting YouTube and Vimeo videos)
 
+**This is an archived project and is no longer maintained. Please do not file issues or pull-requests against this repo. If you wish to continue to develop this code yourself, we recommend you fork it or contact us.**
+
 This module allows adding locally hosted, YouTube or Vimeo videos to any object.
 
 It uses 
